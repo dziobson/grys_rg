@@ -9,7 +9,7 @@
 binary_sensor:
 
   - platform: gpio
-    name: "IN_01"
+    name: "$node IN_01"
     pin:
       pcf8574: pcf_input_2
       number: 13
