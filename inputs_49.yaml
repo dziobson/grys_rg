@@ -23,7 +23,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_1
+              - relay.toggle: relay_1
   - platform: gpio
     name: "IN_02"
     pin:
@@ -39,7 +39,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_2
+              - relay.toggle: relay_2
   - platform: gpio
     name: "IN_03"
     pin:
@@ -55,7 +55,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_3
+              - relay.toggle: relay_3
   - platform: gpio
     name: "IN_04"
     pin:
@@ -71,7 +71,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_4
+              - relay.toggle: relay_4
   - platform: gpio
     name: "IN_05"
     pin:
@@ -87,7 +87,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_5
+              - relay.toggle: relay_5
   - platform: gpio
     name: "IN_06"
     pin:
@@ -103,7 +103,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_6
+              - relay.toggle: relay_6
   - platform: gpio
     name: "IN_07"
     pin:
@@ -119,7 +119,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_7
+              - relay.toggle: relay_7
   - platform: gpio
     name: "IN_08"
     pin:
@@ -135,7 +135,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_8
+              - relay.toggle: relay_8
   - platform: gpio
     name: "IN_09"
     pin:
@@ -151,7 +151,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_9
+              - relay.toggle: relay_9
   - platform: gpio
     name: "IN_10"
     pin:
@@ -166,7 +166,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_10
+              - relay.toggle: relay_10
   - platform: gpio
     name: "IN_11"
     pin:
@@ -182,7 +182,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_11
+              - relay.toggle: relay_11
   - platform: gpio
     name: "IN_12"
     pin:
@@ -198,7 +198,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_12
+              - relay.toggle: relay_12
   - platform: gpio
     name: "IN_13"
     pin:
@@ -214,7 +214,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_13
+              - relay.toggle: relay_13
   - platform: gpio
     name: "IN_14"
     pin:
@@ -230,7 +230,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_14
+              - relay.toggle: relay_14
   - platform: gpio
     name: "IN_15"
     pin:
@@ -246,7 +246,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_15
+              - relay.toggle: relay_15
   - platform: gpio
     name: "IN_16"
     pin:
@@ -262,7 +262,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_16
+              - relay.toggle: relay_16
   - platform: gpio
     name: "IN_17"
     pin:
@@ -278,7 +278,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_17
+              - relay.toggle: relay_17
   - platform: gpio
     name: "IN_18"
     pin:
@@ -294,7 +294,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_18
+              - relay.toggle: relay_18
   - platform: gpio
     name: "IN_19"
     pin:
@@ -310,7 +310,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_19
+              - relay.toggle: relay_19
   - platform: gpio
     name: "IN_20"
     pin:
@@ -326,7 +326,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_20
+              - relay.toggle: relay_20
   - platform: gpio
     name: "IN_21"
     pin:
@@ -342,7 +342,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_21
+              - relay.toggle: relay_21
   - platform: gpio
     name: "IN_22"
     pin:
@@ -358,7 +358,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_22
+              - relay.toggle: relay_22
   - platform: gpio
     name: "IN_23"
     pin:
@@ -374,7 +374,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_23
+              - relay.toggle: relay_23
   - platform: gpio
     name: "IN_24"
     pin:
@@ -390,7 +390,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_24
+              - relay.toggle: relay_24
   - platform: gpio
     name: "IN_25"
     pin:
@@ -406,7 +406,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_25
+              - relay.toggle: relay_25
   - platform: gpio
     name: "IN_26"
     pin:
@@ -422,7 +422,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_26
+              - relay.toggle: relay_26
   - platform: gpio
     name: "IN_27"
     pin:
@@ -438,7 +438,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_27
+              - relay.toggle: relay_27
   - platform: gpio
     name: "IN_28"
     pin:
@@ -454,7 +454,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_28
+              - relay.toggle: relay_28
   - platform: gpio
     name: "IN_29"
     pin:
@@ -470,7 +470,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_29
+              - relay.toggle: relay_29
   - platform: gpio
     name: "IN_30"
     pin:
@@ -486,7 +486,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_30
+              - relay.toggle: relay_30
   - platform: gpio
     name: "IN_31"
     pin:
@@ -502,7 +502,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_31
+              - relay.toggle: relay_31
   - platform: gpio
     name: "IN_32"
     pin:
@@ -518,7 +518,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_32
+              - relay.toggle: relay_32
   - platform: gpio
     name: "IN_33"
     pin:
@@ -534,7 +534,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_33
+              - relay.toggle: relay_33
           
   - platform: gpio
     name: "IN_34"
@@ -551,7 +551,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_34
+              - relay.toggle: relay_34
 
   - platform: gpio
     name: "IN_35"
@@ -568,7 +568,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_35
+              - relay.toggle: relay_35
       
   - platform: gpio
     name: "IN_36"
@@ -585,7 +585,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_36
+              - relay.toggle: relay_36
       
   - platform: gpio
     name: "IN_37"
@@ -602,7 +602,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_37
+              - relay.toggle: relay_37
       
   - platform: gpio
     name: "IN_38"
@@ -619,7 +619,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_38
+              - relay.toggle: relay_38
       
   - platform: gpio
     name: "IN_39"
@@ -636,7 +636,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_39
+              - relay.toggle: relay_39
       
   - platform: gpio
     name: "IN_40"
@@ -653,7 +653,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_40
+              - relay.toggle: relay_40
       
   - platform: gpio
     name: "IN_41"
@@ -670,7 +670,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_41
+              - relay.toggle: relay_41
       
   - platform: gpio
     name: "IN_42"
@@ -687,7 +687,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_42
+              - relay.toggle: relay_42
       
   - platform: gpio
     name: "IN_43"
@@ -704,7 +704,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_43
+              - relay.toggle: relay_43
       
   - platform: gpio
     name: "IN_44"
@@ -721,7 +721,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_44
+              - relay.toggle: relay_44
       
   - platform: gpio
     name: "IN_45"
@@ -738,7 +738,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_45
+              - relay.toggle: relay_45
       
   - platform: gpio
     name: "IN_46"
@@ -755,7 +755,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_46
+              - relay.toggle: relay_46
       
   - platform: gpio
     name: "IN_47"
@@ -772,7 +772,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_47
+              - relay.toggle: relay_47
       
   - platform: gpio
     name: "IN_48"
@@ -789,7 +789,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_48
+              - relay.toggle: relay_48
       
 
   - platform: gpio
@@ -807,6 +807,5 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - switch.toggle: relay_48
+              - relay.toggle: relay_48
       
-
