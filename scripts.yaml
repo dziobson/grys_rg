@@ -1,11 +1,9 @@
 script:
-  - id: on-press
+  - id: blink_light
     parameters:
-      relay-nr: int
+      delay_ms: int
     then:
-      - if:
-        condition:
-          not:
-            api.connected:
-        then:
-          - switch.toggle: relay_${relay-nr}
+      - light.turn_on: status_light
+      # The param delay_ms is accessible using a lambda
+      - delay: !lambda return delay_ms;
+      - light.turn_off: status_light
