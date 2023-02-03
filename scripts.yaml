@@ -2,8 +2,8 @@ script:
   - id: on-press
     parameters:
       relay-nr: int
-    then
-      then
+    then:
+      then:
         - if:
           condition:
             not:
