@@ -3,9 +3,10 @@ script:
     parameters:
       relay-nr: int
     then
-      - if:
-        condition:
-          not:
-            api.connected:
-        then:
-          - switch.toggle: relay_ !lambda return relay-nr
+      then
+        - if:
+          condition:
+            not:
+              api.connected:
+          then:
+            - switch.toggle: relay_ !lambda return relay-nr
