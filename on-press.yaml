@@ -1,4 +1,4 @@
-then:
+
   - if:
     condition:
       not:
