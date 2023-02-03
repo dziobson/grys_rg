@@ -1,5 +1,6 @@
-if:
-  condition:
-    api.connected: false
-  then:
-    - switch.toggle: relay_${id}
+on_press:
+  if:
+    condition:
+      api.connected: false
+    then:
+      - switch.toggle: relay_${id}
