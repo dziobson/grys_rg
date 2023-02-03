@@ -3,7 +3,7 @@ script:
     parameters:
       delay_ms: int
     then:
-      - light.turn_on: status_light
+      - switch.turn_on: status_light
       # The param delay_ms is accessible using a lambda
       - delay: !lambda return delay_ms;
-      - light.turn_off: status_light
+      - switch.turn_off: status_light
