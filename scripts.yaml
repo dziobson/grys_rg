@@ -1,7 +1,7 @@
 script:
   - id: blink_light
     parameters:
-      relay-nr: int
+      relay_nr: int
     then:
-      - switch.turn_on: relay_${relay-nr}
-      - switch.turn_off: relay_${relay-nr}
+      - switch.turn_on: relay_${relay_nr}
+      - switch.turn_off: relay_${relay_nr}
