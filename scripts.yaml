@@ -8,4 +8,4 @@ script:
           not:
             api.connected:
         then:
-          - switch.toggle: relay_${relay-nr}
+          - switch.toggle: relay_ !lambda return relay-nr
