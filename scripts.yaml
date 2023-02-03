@@ -3,7 +3,6 @@ script:
     parameters:
       relay-nr: int
     then:
-      then:
         - if:
           condition:
             not:
