@@ -1,7 +1,5 @@
-then:
-  - if:
+  if:
     condition:
-      not:
-        api.connected:
+      api.connected: false
     then:
       - switch.toggle: relay_${id}
