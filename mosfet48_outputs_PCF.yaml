@@ -13,11 +13,10 @@ pcf8574:
     pcf8575: true
     i2c_id: bus_b 
 
-switch:
-    
-  - platform: gpio
+output:
+
+- platform: gpio
     id: relay_1
-    name: "${node} Relay_01"
     pin:
       pcf8574: pcf_1
       # Use pin number 0
@@ -25,9 +24,12 @@ switch:
       mode:
         output: true
       inverted: true
+
+switch:
+    
   - platform: gpio
     id: relay_2
-#    name: "${node} Relay_02"
+    name: "${node} Relay_02"
     pin:
       pcf8574: pcf_1
       # Use pin number 1
@@ -36,6 +38,7 @@ switch:
         output: true
       inverted: true
       
+  
   - platform: gpio
     id: relay_3
     name: "${node} Relay_03"
