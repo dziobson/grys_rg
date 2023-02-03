@@ -1,7 +1,7 @@
 script:
   - id: blink_light
     parameters:
-      relay_nr: int
+      relay_nr: string
     then:
-      - switch.turn_on: relay_1
-      - switch.turn_off: relay_1
+      - switch.turn_on: !lambda return relay_nr;
+
