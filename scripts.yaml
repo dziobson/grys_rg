@@ -3,5 +3,5 @@ script:
     parameters:
       relay_nr: int
     then:
-      - switch.turn_on: relay_{relay_nr}
-      - switch.turn_off: relay_{relay_nr}
+      - switch.turn_on: relay_1
+      - switch.turn_off: relay_1
