@@ -16,13 +16,14 @@ binary_sensor:
       mode:
        input: true
       inverted: true
-    on_press: !include { file: on-press.yaml, vars: { id: 1 } }
-#        - if:
-#            condition:
-#              not:
-#                api.connected:
-#            then:
-#              - switch.toggle: relay_1
+#    on_press: !include { file: on-press.yaml, vars: { id: 1 } }
+    on_press:
+        - if:
+            condition:
+              not:
+                api.connected:
+            then:
+              - switch.toggle: relay_1
   - platform: gpio
     name: "${node} IN_02"
     pin:
