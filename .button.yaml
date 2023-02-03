@@ -1,0 +1,109 @@
+#.button.yaml file contents
+
+#Expected ${id} to substitute for index number
+#Expected ${gpio_in} to substitute for the gpio button pin
+#Expected ${gpio_out} to substitute for the gpio button pin
+
+switch:
+  - platform: template
+    name: "Toggle ${id} single"
+    id: switch_${id}_single
+    optimistic: true
+    icon: mdi:numeric-1-box
+    on_turn_on:
+    - light.turn_on: 
+        id: button_led_${id}
+        effect: "single"
+        brightness: 50%
+    on_turn_off:
+    - light.turn_off: button_led_${id}
+
+  - platform: template
+    name: "Toggle ${id} double"
+    id: switch_${id}_double
+    optimistic: true
+    icon: mdi:numeric-1-box-multiple
+    on_turn_on:
+    - light.turn_on: 
+        id: button_led_${id}
+        effect: "double"
+        brightness: 50%
+    on_turn_off:
+    - light.turn_off: button_led_${id}
+
+  - platform: template
+    name: "Toggle ${id} long"
+    id: switch_${id}_long
+    internal: true
+    optimistic: true
+    icon: mdi:chat-sleep
+    on_turn_on:
+    - light.turn_on: 
+        id: button_led_${id}
+        effect: "hold"
+        brightness: 50%
+    on_turn_off:
+    - light.turn_off: button_led_${id}
+
+
+binary_sensor:
+  - name: "Button ${id}"
+    id: button_${id}
+    internal: true
+    platform: gpio
+    pin:
+      number: ${gpio_in}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+
+    on_multi_click:
+      - timing:
+          - ON for at most 1s
+          - OFF for at most 0.3s
+          - ON for at most 1s
+          - OFF for at least 0.2s
+        then:
+          - lambda: !lambda id(switch_${id}_double).toggle();
+          - logger.log: "Button ${id} Double"
+      - timing:
+          - ON for at most 1s
+          - OFF for at least 0.5s
+        then:
+          - lambda: !lambda id(switch_${id}_single).toggle();
+          - logger.log: "Button ${id} Single"
+      - timing:
+          - ON for 1s to 2s
+          - OFF for at least 0.5s
+        then:
+          - lambda: !lambda id(switch_${id}_single).turn_off();
+          - lambda: !lambda id(switch_${id}_double).turn_off();
+          - logger.log: "Button ${id} Long"
+  
+
+output:
+  - platform: ledc
+    pin:  ${gpio_out}
+    id: pin_led_${id}
+
+light:
+  - platform: monochromatic
+    output: pin_led_${id}
+    name: "Button ${id} LED"
+    id: button_led_${id}
+    internal: true
+    effects:
+      - pulse:
+          name: "single"
+          transition_length: 2s
+          update_interval: 4s
+      - pulse:
+          name: "double"
+          transition_length: 1s
+          update_interval: 2s
+      - pulse:
+          name: "hold"
+          transition_length: 0.5s
+          update_interval: 1s
+
