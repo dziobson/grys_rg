@@ -1,9 +1,7 @@
 script:
   - id: blink_light
     parameters:
-      delay_ms: int
+      relay-nr: int
     then:
-      - switch.turn_on: relay_1
-      # The param delay_ms is accessible using a lambda
-      - delay: !lambda return delay_ms;
-      - switch.turn_off: relay_1
+      - switch.turn_on: relay_${relay-nr}
+      - switch.turn_off: relay_${relay-nr}
