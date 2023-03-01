@@ -23,7 +23,7 @@ binary_sensor:
               not:
                 api.connected:
             then:
-              - output.toggle: relay_1
+              - switch.toggle: relay_1
   - platform: gpio
     name: "${node} IN_02"
     pin:
